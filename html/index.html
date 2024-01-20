@@ -9,7 +9,7 @@
     <meta name="keywords" content="Fastkart">
     <meta name="author" content="Fastkart">
     <link rel="icon" href="../assets/images/favicon/1.png" type="image/x-icon">
-    <title>On-demand last-mile delivery</title>
+    <title>Yaha Mile Ghar Ka Khana</title>
 
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com/">
@@ -67,7 +67,7 @@
                     <div class="col-xxl-3 d-xxl-block d-none">
                         <div class="top-left-header">
                             <i class="iconly-Location icli text-white"></i>
-                            <span class="text-white">1418 Riverwood Drive, CA 96052, US</span>
+                            <span class="text-white">Bakhtiyarpur College of Engineering, Patna -803212</span>
                         </div>
                     </div>
 
@@ -76,8 +76,7 @@
                             <div class="notification-slider">
                                 <div>
                                     <div class="timer-notification">
-                                        <h6><strong class="me-1">Welcome to Fastkart!</strong>Wrap new offers/gift
-                                            every signle day on Weekends.<strong class="ms-1">New Coupon Code: Fast024
+                                        <h6><strong class="me-1">Welcome to Daawat Dil Se!</strong>Buy food from homecooks near you.<strong class="ms-1">New Coupon Code: Fast024
                                             </strong>
 
                                         </h6>
@@ -86,7 +85,7 @@
 
                                 <div>
                                     <div class="timer-notification">
-                                        <h6>Something you love is now on sale!
+                                        <h6>Someone is cooking Butter Chicken near you!
                                             <a href="shop-left-sidebar.html" class="text-white">Buy Now
                                                 !</a>
                                         </h6>
@@ -1078,7 +1077,7 @@
                         <div class="home-detail p-center-left w-75">
                             <div>
                                 <h6>Exclusive offer <span>30% Off</span></h6>
-                                <h1 class="text-uppercase">Stay home & delivered your <span class="daily">Daily
+                                <h1 style="text-transform: uppercase; color: #FF4F4F;">Stay home & delivered your <span class="daily">Daily
                                         Needs</span></h1>
                                 <p class="w-75 d-none d-sm-block">Vegetables contain many vitamins and minerals that are
                                     good for your health.</p>
@@ -1483,28 +1482,28 @@
                                         <li>
                                             <div class="counter">
                                                 <div>
-                                                    <h6 id="days1"></h6>
+                                                    <h6 id="days2"></h6>
                                                 </div>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="counter">
                                                 <div>
-                                                    <h6 id="hours1"></h6>
+                                                    <h6 id="hours2"></h6>
                                                 </div>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="counter">
                                                 <div>
-                                                    <h6 id="minutes1"></h6>
+                                                    <h6 id="minutes2"></h6>
                                                 </div>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="counter">
                                                 <div>
-                                                    <h6 id="seconds1"></h6>
+                                                    <h6 id="seconds2"></h6>
                                                 </div>
                                             </div>
                                         </li>
@@ -1513,6 +1512,27 @@
                             </div>
                         </div>
                     </div>
+                    <script>
+    function updateTimer() {
+      const endDate = new Date("2024-12-31T23:59:59"); // Set your desired end date and time
+      const now = new Date();
+
+      const timeRemaining = endDate - now;
+      const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+      document.getElementById('days2').textContent = days;
+      document.getElementById('hours2').textContent = hours;
+      document.getElementById('minutes2').textContent = minutes;
+      document.getElementById('seconds2').textContent = seconds;
+    }
+
+    setInterval(updateTimer, 1000); // Update every second
+    updateTimer(); // Initial call to display the timer immediately
+  </script>
+
 
                     <div class="section-b-space">
                         <div class="product-border border-row overflow-hidden">
@@ -3739,17 +3759,16 @@
                             </div>
 
                             <div class="footer-logo-contain">
-                                <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to
-                                    demonstrate the visual form.</p>
+                                <p>"Daawat Dil Se" reflects our commitment to creating a platform where the joy of cooking transforms into economic opportunities.</p>
 
                                 <ul class="address">
                                     <li>
                                         <i data-feather="home"></i>
-                                        <a href="javascript:void(0)">1418 Riverwood Drive, CA 96052, US</a>
+                                        <a href="https://maps.app.goo.gl/3h6AGPS8XHeJt2AS9">Bakhtiyarpur College Of Engineering, Patna - 20</a>
                                     </li>
                                     <li>
                                         <i data-feather="mail"></i>
-                                        <a href="javascript:void(0)">support@fastkart.com</a>
+                                        <a href="mailto:ayush@daawatdilse.tech">ayush@daawatdilse.tech</a>
                                     </li>
                                 </ul>
                             </div>
