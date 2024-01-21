@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1168,11 +1169,12 @@
                     <div class="title d-xxl-none d-block">
                         <h2>Contact Us</h2>
                     </div>
+                    <!--added this--><form id="feedbackForm" action="https://script.google.com/macros/s/AKfycbwuVVxIJuwhx7C75gpnHwKbelsg7da4PQ8pcv5SERa3eI-lLxMI7WHZVl0XYwp0LdMj7g/exec" method="post">
                     <div class="right-sidebar-box">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlInput" class="form-label">First Name</label>
+                                    <label for="First Name">First Name:</label><!--change made-->
                                     <div class="custom-input">
                                         <input type="text" class="form-control" id="exampleFormControlInput"
                                             placeholder="Enter First Name">
@@ -1183,7 +1185,7 @@
 
                             <div class="col-md-6">
                                 <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+                                    <label for="Last Name">Last Name</label><!--change made-->
                                     <div class="custom-input">
                                         <input type="text" class="form-control" id="exampleFormControlInput1"
                                             placeholder="Enter Last Name">
@@ -1194,7 +1196,7 @@
 
                             <div class="col-xxl-12 col-md-6">
                                 <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlInput2" class="form-label">Email Address</label>
+                                    <label for="Email Address">Email Address</label><!--change made-->
                                     <div class="custom-input">
                                         <input type="email" class="form-control" id="exampleFormControlInput2"
                                             placeholder="Enter Email Address">
@@ -1205,7 +1207,7 @@
 
                             <div class="col-xxl-12 col-md-6">
                                 <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlInput3" class="form-label">Phone Number</label>
+                                    <label for="Phone Number">Phone Number</label><!--change made-->
                                     <div class="custom-input">
                                         <input type="tel" class="form-control" id="exampleFormControlInput3"
                                             placeholder="Enter Your Phone Number" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value =
@@ -1217,7 +1219,7 @@
 
                             <div class="col-12">
                                 <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlTextarea" class="form-label">Message</label>
+                                    <label for="Message">Message</label><!--change made-->
                                     <div class="custom-textarea">
                                         <textarea class="form-control" id="exampleFormControlTextarea"
                                             placeholder="Enter Your Message" rows="6"></textarea>
@@ -1226,8 +1228,32 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="btn btn-animation btn-md fw-bold ms-auto">Send Message</button>
+                        <button type="submit" class="btn btn-animation btn-md fw-bold ms-auto">Submit Message</button>
                     </div>
+                    </form>
+                    <!--added this--><script>
+                        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+                          // Prevent the default form submission behavior
+                          event.preventDefault();
+                    
+                          // Collect form data using FormData
+                          const formData = new FormData(this);
+                    
+                          // Send a POST request to the Google Apps Script web app
+                          fetch('https://script.google.com/macros/s/AKfycbwuVVxIJuwhx7C75gpnHwKbelsg7da4PQ8pcv5SERa3eI-lLxMI7WHZVl0XYwp0LdMj7g/exec', {
+                            method: 'POST',
+                            body: formData,
+                          })
+                          .then(response => response.text())
+                          .then(data => {
+                            // Log server response to the console
+                            console.log(data);
+                            // Display a user-friendly message
+                            alert(data);
+                          })
+                          .catch(error => console.error(error));
+                        });
+                      </script>
                 </div>
             </div>
         </div>
